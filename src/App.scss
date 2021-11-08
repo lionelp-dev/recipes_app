@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App > .sidebar {
+  flex: 1 1 10%;
+  background-color: rgb(238, 238, 238);
+}
+
+.App > .content {
+  padding: 0 2.6rem;
+  flex: 1 1 70%;
+}
+
+.calendar__body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  .calendar__cell {
+    padding: 3.7rem 0.7rem;
+    text-align: right;
+    border: 1px solid #5555553b;
+    list-style: none;
+  }
+  .calendar__cell:hover {
+    background-color: rgb(245, 238, 229);
+  }
+}
+
+.calendar__day_of_the_week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  li {
+    text-align: right;
+    padding: 1.7rem 0.7rem;
+    background-color: rgb(242, 223, 199);
+    font-weight: #555555;
+    border: 1px solid #5555553b;
+    list-style: none;
+  }
+}
+
+.calendar__control {
+  display: flex;
+  gap: 2.7rem;
+  .currentMonth__control {
+    display: inline-flex;
+    gap: 1.7rem;
+  }
+  .currentYear__control {
+    display: inline-flex;
+    gap: 1.7rem;
+  }
+}
+
+.cell__currentDay {
+  background-color: rgb(252, 230, 210);
+}
